@@ -12,10 +12,10 @@ async def lifespan(app: FastAPI):
     print("Starting up: Loading models and dataset...")
     try:
         # Using absolute Colab paths to ensure they are always found
-        ml_models['rf_model'] = joblib.load('medicine_price_model.pkl')
-        ml_models['manuf_encoder'] = joblib.load('manuf_encoder.pkl')
-        ml_models['comp_encoder'] = joblib.load('comp_encoder.pkl')
-        app_data['df'] = pd.read_csv('cleaned_medicines.csv')
+        ml_models['rf_model'] = joblib.load('model/medicine_price_model.pkl')
+        ml_models['manuf_encoder'] = joblib.load('model/manuf_encoder.pkl')
+        ml_models['comp_encoder'] = joblib.load('model/comp_encoder.pkl')
+        app_data['df'] = pd.read_csv('data/cleaned_medicines.csv')
         print("Startup complete! Ready to serve requests.")
     except Exception as e:
         print(f"CRITICAL ERROR during startup: {e}")
