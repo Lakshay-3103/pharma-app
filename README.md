@@ -1,11 +1,14 @@
 💊 Medicine Price & Alternative Finder :
+
   A full-stack machine learning application designed to predict fair pharmaceutical prices and recommend cheaper manufacturer alternatives built using FastAPI Backend and      streamlit Frontend.
 
-🚀 Live Demo :
-      Frontend UI: pharma-app-a2djh7gfyp92dgotydhvnm.streamlit.app
+🚀 Live Demo 
+
+      Frontend UI: pharma-app-a2djh7gfyp92dgotydhvnm.streamlit.app , 
       Backend API: https://medicine-api-48l2.onrender.com
 
 📂 Project Structure
+
   Following a clean separation of concerns, the repository is structured as follows:
   pharma-app/
   │
