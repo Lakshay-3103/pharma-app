@@ -3,7 +3,7 @@ import requests
 import pandas as pd
 
 # This points to your FastAPI server running in the Colab background
-API_URL = "http://localhost:8000"
+API_URL = "https://medicine-api-48l2.onrender.com"
 
 st.set_page_config(page_title="Medicine Finder", layout="centered")
 
