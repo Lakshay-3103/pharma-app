@@ -53,4 +53,15 @@ Machine Learning: Scikit-Learn (Random Forest) and Pandas. Model artifact is opt
 4. Start the Streamlit Frontend (in a new terminal):
     cd frontend
     streamlit run app.py
-  
+
+
+
+## Model Performance & Data Processing
+
+**Model Accuracy**
+  The core prediction engine utilizes a Random Forest Regressor to estimate pharmaceutical costs. During evaluation, the model achieved a Mean Absolute Error (MAE) of        ₹182.13. This metric represents the average deviation between our predicted medicine prices and the actual market prices, demonstrating the model's reliability for real-   world pricing estimation.
+
+**Composition Cleaning Approach**
+  Handling raw pharmaceutical data required strict preprocessing, particularly for the active medicine compositions. The cleaning pipeline focused on:
+  **Standardization:** Normalizing text by resolving case inconsistencies, stripping irregular special characters, and standardizing whitespace across raw ingredient            strings using `pandas`.
+  **Categorical Encoding:** Once the composition strings were standardized, they were transformed into machine-readable numerical formats using a fitted label encoder           (`comp_encoder.pkl`). This allowed the Random Forest model to accurately weight the impact of specific active ingredients on the final price point without losing the       underlying feature patterns.
